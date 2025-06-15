@@ -1,0 +1,14 @@
+Plugin Name	Functionality
+water_reminder	Hydration reminder every 2 hours
+study_scheduler	Add/reschedule study tasks
+todo_manager	Add and manage todo list
+punishment_manager	Assign punishment for incomplete tasks
+standup_notifier	Warn if sitting too long
+college_scheduler	Avoid scheduling during college time
+bath_log	Log your bath/skincare routine
+auto_rescheduler	Shift schedule if busy
+routine_logger	Log daily actions
+mood_tracker	Track and log your mood
+memory_recall	Recall what happened today
+goal_planner	Create 7-day goal plan
+
