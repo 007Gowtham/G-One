@@ -1,0 +1,150 @@
+# Essential Git & GitHub Commands - Most Used & Useful
+# ====================================================
+
+# 🚀 FIRST TIME SETUP (Do Once)
+# -----------------------------
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# 📁 PROJECT SETUP
+# ----------------
+git init                                    # Initialize new repo
+git clone https://github.com/user/repo.git # Clone existing repo
+git remote add origin https://github.com/user/repo.git
+
+# 📝 DAILY WORKFLOW (Most Used)
+# -----------------------------
+git status                                  # Check what's changed
+git add .                                   # Add all changes
+git add filename.txt                        # Add specific file
+git commit -m "Your commit message"         # Commit changes
+git push                                    # Push to GitHub
+git push origin main                        # Push to specific branch
+git pull                                    # Get latest changes
+
+# 🌿 BRANCHING (Essential)
+# ------------------------
+git branch                                  # List branches
+git checkout -b feature-name                # Create & switch to new branch
+git checkout main                           # Switch to main branch
+git merge feature-name                      # Merge branch into current
+git branch -d feature-name                  # Delete branch
+
+# 🔄 UNDOING MISTAKES (Lifesavers)
+# --------------------------------
+git restore filename.txt                    # Undo changes in file
+git restore --staged filename.txt           # Unstage file
+git reset --soft HEAD~1                     # Undo last commit (keep changes)
+git reset --hard HEAD~1                     # Undo last commit (lose changes)
+git stash                                   # Save work temporarily
+git stash pop                               # Get stashed work back
+
+# 📊 VIEWING HISTORY
+# -----------------
+git log                                     # View commit history
+git log --oneline                          # Compact history
+git diff                                   # See what changed
+git show HEAD                              # Show last commit
+
+# 🏷️ RELEASES
+# -----------
+git tag v1.0.0                             # Create tag
+git push origin v1.0.0                     # Push tag to GitHub
+
+# 🚨 EMERGENCY COMMANDS (When Things Go Wrong)
+# --------------------------------------------
+git stash -u                               # Stash everything (including new files)
+git checkout -- .                         # Discard all changes
+git clean -fd                              # Remove untracked files/folders
+git reflog                                 # See all recent actions (recovery)
+
+# 🔧 USEFUL ALIASES (Add to ~/.gitconfig)
+# ---------------------------------------
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.unstage 'reset HEAD --'
+
+# 📱 COMPLETE PROJECT WORKFLOW
+# ----------------------------
+
+# 1. Start new project:
+mkdir my-project && cd my-project
+git init
+echo "# My Project" > README.md
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/username/my-project.git
+git push -u origin main
+
+# 2. Daily work routine:
+git pull                                   # Get updates
+git checkout -b new-feature                # Create feature branch
+# ... make changes ...
+git add .
+git commit -m "Add new feature"
+git push origin new-feature
+# Create Pull Request on GitHub
+git checkout main                          # Switch back to main
+git pull                                   # Get updates including your merged PR
+
+# 3. Quick fixes:
+git add .
+git commit -m "Quick fix"
+git push
+
+# 🎯 TOP 10 MOST USED COMMANDS (In Order)
+# ---------------------------------------
+1. git status
+2. git add .
+3. git commit -m "message"
+4. git push
+5. git pull
+6. git checkout branch-name
+7. git checkout -b new-branch
+8. git log --oneline
+9. git stash
+10. git merge branch-name
+
+# 💡 PRO TIPS
+# -----------
+
+# See what you're about to commit:
+git diff --staged
+
+# Commit all tracked files at once:
+git commit -am "message"
+
+# Push new branch and set upstream:
+git push -u origin branch-name
+
+# Quickly switch to previous branch:
+git checkout -
+
+# See file history:
+git log --follow filename
+
+# Undo last commit but keep files staged:
+git reset --soft HEAD~1
+
+# Create branch from specific commit:
+git checkout -b new-branch commit-hash
+
+# 🔄 SYNCING FORK (If working with forks)
+# ---------------------------------------
+git remote add upstream https://github.com/original/repo.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+
+# 🚀 GITHUB CLI (Modern Way)
+# --------------------------
+gh auth login                              # Login to GitHub
+gh repo create project-name                # Create repo
+gh pr create                               # Create pull request
+gh pr merge                                # Merge pull request
+gh issue create                            # Create issue
+
+# That's it! These commands cover 95% of daily Git usage! 🎉
